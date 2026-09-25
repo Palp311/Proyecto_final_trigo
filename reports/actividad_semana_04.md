@@ -6,11 +6,11 @@ Para mi proyecto final trabajaré con un conjunto de datos de práctica simulado
 
 ## 2. Repositorio
 
-Repositorio público: [Palp311/curso-eda-trigo](https://github.com/Palp311/curso-eda-trigo). La estructura usa nombres cortos en minúsculas y carpetas separadas para datos crudos, datos procesados, scripts, figuras e informes.
+Repositorio público: [Palp311/Proyecto_final_trigo](https://github.com/Palp311/Proyecto_final_trigo). Incluye un proyecto de RStudio y carpetas descriptivas para datos crudos, datos procesados, scripts, figuras e informes.
 
 ## 3. EDA
 
-Ejecuté `Rscript scripts/01_eda.R`. La tabla integrada tiene 40 muestras y 28 variables; no contiene NA. Los promedios simulados de fotosíntesis neta fueron 22,12 en control y 12,59 en calor; los de potasio, 38,52 y 30,37; y los de prolina, 41,04 y 64,69, respectivamente. El script crea [una figura exploratoria](../figures/eda_multicapa.pdf) que muestra una variable de cada capa por genotipo y tratamiento. Estos valores son descriptivos y simulados; no se deben interpretar como resultados científicos.
+Ejecuté `Rscript scripts/01_eda.R`. La tabla integrada tiene 40 muestras y 28 variables; no contiene NA. Cada promedio usa 20 muestras por tratamiento. Los promedios simulados de fotosíntesis neta fueron 22,12 en control y 12,59 en calor; los de potasio, 38,52 y 30,37; y los de prolina, 41,04 y 64,69, respectivamente. El script crea [una figura exploratoria](../figures/eda_multicapa.pdf) que muestra una variable de cada capa por genotipo y tratamiento. Estos valores son descriptivos y simulados; no se deben interpretar como resultados científicos.
 
 ## 4. Datos ausentes
 

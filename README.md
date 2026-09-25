@@ -14,18 +14,19 @@ Todos los valores son simulados para practicar; no son mediciones ni resultados 
 
 ## EDA
 
-Con R base, ejecuta desde la carpeta raíz:
+Abre `Proyecto_final_trigo.Rproj` en RStudio y ejecuta `scripts/01_eda.R`, o usa R base desde la carpeta raíz:
 
 ```sh
 Rscript scripts/01_eda.R
 ```
 
-El script muestra dimensiones, valores ausentes y promedios de fotosíntesis neta, potasio y prolina por tratamiento. También guarda una figura exploratoria en `figures/eda_multicapa.pdf`. Los gráficos son descriptivos; no se hacen inferencias estadísticas con estos datos sintéticos.
+El script muestra dimensiones, valores ausentes y promedios de fotosíntesis neta, potasio y prolina por tratamiento junto con el número de observaciones de cada promedio. También guarda una figura exploratoria en `figures/eda_multicapa.pdf`. Los gráficos son descriptivos; no se hacen inferencias estadísticas con estos datos sintéticos.
 
 ## Estructura
 
 ```text
-curso-eda-trigo/
+Proyecto_final_trigo/
+├── Proyecto_final_trigo.Rproj
 ├── data/
 │   ├── raw/          # Tablas simuladas por capa
 │   └── processed/    # Tabla integrada generada por el script

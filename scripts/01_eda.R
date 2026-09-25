@@ -57,10 +57,23 @@ print(with(integrated, table(genotipo, tratamiento)))
 cat("Missing values by variable:\n")
 print(colSums(is.na(integrated)))
 
-means <- aggregate(
-  cbind(A_net, K_mg_g, Prolina) ~ tratamiento,
-  data = integrated,
-  FUN = function(x) round(mean(x, na.rm = TRUE), 2)
+summarize_variable <- function(variable) {
+  groups <- split(integrated[[variable]], integrated$tratamiento)
+  data.frame(
+    variable = variable,
+    treatment = names(groups),
+    n = vapply(groups, function(x) sum(!is.na(x)), integer(1)),
+    mean = vapply(
+      groups,
+      function(x) if (all(is.na(x))) NA_real_ else round(mean(x, na.rm = TRUE), 2),
+      numeric(1)
+    ),
+    row.names = NULL
+  )
+}
+means <- do.call(
+  rbind,
+  lapply(c("A_net", "K_mg_g", "Prolina"), summarize_variable)
 )
 cat("Descriptive means by treatment (simulated values):\n")
 print(means, row.names = FALSE)
@@ -74,7 +87,7 @@ group <- interaction(
 group_colors <- ifelse(grepl("Calor", levels(group)), "#E69F00", "#56B4E9")
 plot_data <- transform(integrated, grupo = group)
 
-pdf(file.path(figure_dir, "eda_multicapa.pdf"), width = 13, height = 6)
+pdf(file.path(figure_dir, "eda_multicapa.pdf"), width = 13, height = 6, timestamp = FALSE)
 par(mfrow = c(1, 3), mar = c(9, 4, 3, 1))
 boxplot(
   A_net ~ grupo,
