@@ -14,13 +14,7 @@ Todos los valores son simulados para practicar; no son mediciones ni resultados 
 
 ## EDA
 
-Abre `Proyecto_final_trigo.Rproj` en RStudio. El análisis usa `dplyr`, `tidyr`, `readr` y `ggplot2`; si faltan, instálalos una vez con `install.packages(c("dplyr", "tidyr", "readr", "ggplot2"))`. Luego ejecuta el script desde la raíz del proyecto:
-
-```sh
-Rscript scripts/01_eda.R
-```
-
-La ejecución se verificó con R 4.6.1, dplyr 1.2.1, tidyr 1.3.2, readr 2.2.0 y ggplot2 4.0.3.
+La ejecución de EDA se verificó con R 4.6.1, dplyr 1.2.1, tidyr 1.3.2, readr 2.2.0 y ggplot2 4.0.3.
 
 El script valida los identificadores y metadatos de las tres capas, crea una tabla integrada y otra en formato largo, y comprueba la cantidad de muestras y datos ausentes. Produce resúmenes por tratamiento y genotipo (n, media, desviación estándar, mediana y cuartiles), cambios porcentuales frente al control y correlaciones exploratorias de Spearman dentro de cada tratamiento. Los resultados tabulares están en `reports/eda_*.csv`; la interpretación está en [`reports/eda_detallado.md`](reports/eda_detallado.md).
 
