@@ -1,4 +1,4 @@
-# EDA de trigo bajo estrés térmico
+# Proyecto trigo bajo estrés térmico
 
 Proyecto del curso para explorar datos simulados inspirados en una tesis sobre respuestas de trigo duro (*Triticum durum*) al calor durante antesis.
 
